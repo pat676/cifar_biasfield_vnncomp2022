@@ -71,7 +71,7 @@ if __name__ == '__main__':
     torch.random.manual_seed(int(sys.argv[1]))
 
     num_props = 72
-    epsilon = 0.05
+    epsilon = 0.06
     timeout = 300
     num_coeff = 16
 

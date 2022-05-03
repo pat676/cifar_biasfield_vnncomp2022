@@ -32,7 +32,7 @@ def create_biasfield_models(network_path: str, num_models: int = 1, order=3):
     model.set_device(True)
     model.eval()
 
-    print(f"Network accuracy: {100 * calc_accuracy(model, mean, std):.2f}%")
+    # print(f"Network accuracy: {100 * calc_accuracy(model, mean, std):.2f}%")
 
     images, labels = get_cifar_test_data(10000)
     bias_field_models = []
