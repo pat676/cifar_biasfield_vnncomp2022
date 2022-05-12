@@ -513,12 +513,7 @@ class ONNXParser:
         Helper function to convert tensor to correct format.
         """
 
-        try:
-            return self._tensor_type(x).pin_memory()
-        except NotImplementedError:
-            return self._tensor_type(x)  # Pin memory not implemented on the current system.
-        except RuntimeError:
-            return self._tensor_type(x)  # Cuda not available.
+        return self._tensor_type(x)
 
 
 class CustomNode:
